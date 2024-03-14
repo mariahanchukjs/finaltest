@@ -3,17 +3,17 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 
-string[] originalArray = {"Hello", "2", "world", ":-)"};
-string[] newArray = new string[originalArray.Length];
+string[] array1 = new string[4] {"1234", "1567", "-2", "computer science"};
+string[] array2 = new string[array1.Length];
 
-void createNewArray (string[] originalArray, string[] newArray)
+void createNewArray (string[] array1, string[] array2)
 {
     int count = 0;
-    for (int i = 0; i < originalArray.Length; i++)
+    for (int i = 0; i < array1.Length; i++)
     {
-        if (originalArray[i].Length <= 3)
+        if (array1[i].Length <= 3)
         {
-            newArray[count] = originalArray[i];
+            array2[count] = array1[i];
             count++;
         }
     }
@@ -23,7 +23,10 @@ void PrintArray (string [] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($", {array[i]} ");
+        Console.Write($"{array[i]} ");
     }
     Console.WriteLine();
 }
+
+createNewArray(array1, array2);
+PrintArray(array2);
