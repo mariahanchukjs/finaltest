@@ -8,5 +8,22 @@ string[] newArray = new string[originalArray.Length];
 
 void createNewArray (string[] originalArray, string[] newArray)
 {
-    
+    int count = 0;
+    for (int i = 0; i < originalArray.Length; i++)
+    {
+        if (originalArray[i].Length <= 3)
+        {
+            newArray[count] = originalArray[i];
+            count++;
+        }
+    }
+}
+
+void PrintArray (string [] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($", {array[i]} ");
+    }
+    Console.WriteLine();
 }
