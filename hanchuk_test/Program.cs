@@ -5,3 +5,8 @@
 
 string[] originalArray = {"Hello", "2", "world", ":-)"};
 string[] newArray = new string[originalArray.Length];
+
+void createNewArray (string[] originalArray, string[] newArray)
+{
+    
+}
